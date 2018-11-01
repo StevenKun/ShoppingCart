@@ -76,7 +76,8 @@ public class DBUtil {
                           +" 打印日期 :"+s7 + "\n "
                           +" 取消日期 :"+s8 + "\n "
                           +" 实际入物流日 :"+s9 + "\n "
-                          +" 生产区分 :"+s10 + "\n ";
+                          +" 生产区分 :"+s10 + "\n "
+                          +" \n";
             }
             ps.close();
             closeConnect();
