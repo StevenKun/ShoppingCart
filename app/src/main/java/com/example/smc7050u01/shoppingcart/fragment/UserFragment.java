@@ -77,15 +77,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                  * 4.跳转更新界面，并把url传递过去
                  */
 
-                // 使用DownloadManager进行下载，需要卸载原程序
-                /*downloadManagerUtil =new DownloadManagerUtil(getActivity());
-                if (downloadId !=0){
-                    downloadManagerUtil.clearCurrentTask(downloadId);
-                }
-                downloadId =downloadManagerUtil.download(StaticClass.CHECK_UPDATE_URL, title, desc);
-                break;*/
-
-
+                
         }
     }
 
