@@ -5,4 +5,11 @@
     <string name="login">登录</string>
     <string name="requestno">订单号</string>
     <string name="select">查找</string>
+    <string name="order_receiving">已接单</string>
+    <string name="print">已打印</string>
+    <string name="storege">已入库</string>
+    <string name="itemid">订单项号</string>
+    <string name="requestid">订单编号</string>
+    <string name="Query">查询</string>
+    <string name="lookfowardto">返信中心期待中</string>
 </resources>

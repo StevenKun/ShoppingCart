@@ -14,10 +14,8 @@ public class DBUtil {
     private static String USER = "likun";
     private static String PWD = "q1w2e3r4";
 
-
     private static Connection conn = null;
     private static Statement stmt = null;
-
 
 
     private static Connection getSQLConnection() {

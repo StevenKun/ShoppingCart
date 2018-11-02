@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.example.smc7050u01.shoppingcart.R;
 import com.example.smc7050u01.shoppingcart.util.DownloadManagerUtil;
 import com.example.smc7050u01.shoppingcart.util.StaticClass;
+import com.kymjs.rxvolley.RxVolley;
 
 /**
  * 项目名： ShoppingCart
@@ -76,6 +77,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                  * 3.dialog提示
                  * 4.跳转更新界面，并把url传递过去
                  */
+
 
                 
         }

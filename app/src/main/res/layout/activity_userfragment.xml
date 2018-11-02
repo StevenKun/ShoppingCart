@@ -26,5 +26,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="检测是否有新版本，如果有，请尽快更新" />
-
 </LinearLayout>

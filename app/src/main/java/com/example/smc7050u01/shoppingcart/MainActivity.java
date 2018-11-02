@@ -7,16 +7,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.example.smc7050u01.shoppingcart.fragment.Returnletter;
 import com.example.smc7050u01.shoppingcart.fragment.ShoppingCartFragment;
 import com.example.smc7050u01.shoppingcart.fragment.UserFragment;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
+
 
 /**
  * 项目名： ShoppingCart

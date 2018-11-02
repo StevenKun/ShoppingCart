@@ -83,7 +83,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
                 android:gravity="center"
-                android:text="已接单" />
+                android:text="@string/order_receiving" />
 
             <View
                 android:layout_width="30dp"
@@ -99,7 +99,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
                 android:gravity="center"
-                android:text="已打印" />
+                android:text="@string/print" />
 
             <View
                 android:layout_width="30dp"
@@ -115,7 +115,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
                 android:gravity="center"
-                android:text="已入库" />
+                android:text="@string/storege" />
 
 
         </LinearLayout>
