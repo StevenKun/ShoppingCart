@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.example.smc7050u01.shoppingcart.fragment.Returnletter;
 import com.example.smc7050u01.shoppingcart.fragment.ShoppingCartFragment;
+import com.example.smc7050u01.shoppingcart.fragment.TimesSquare;
 import com.example.smc7050u01.shoppingcart.fragment.UserFragment;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ import java.util.List;
  * 文件名:  MainActivity
  * 创建者： Steven Kun
  * 创建时间：2018/10/23
- * 描述：TODO
+ * 描述：TODO 整体布局  主页面
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -48,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initView() {
-
-
 
         tabLayout = findViewById(R.id.mtabLayout);
         viewPager = findViewById(R.id.mviewpager);
@@ -79,15 +78,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+
         mtitile = new ArrayList<>();
         mtitile.add("订单查询");
         mtitile.add("返信中心");
         mtitile.add("个人中心");
+        mtitile.add("日历查看");
         fragment = new ArrayList<>();
         fragment.add(new ShoppingCartFragment());
         fragment.add(new Returnletter());
         fragment.add(new UserFragment());
-
+        fragment.add(new TimesSquare());
     }
 
 
