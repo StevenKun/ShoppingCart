@@ -12,4 +12,6 @@
     <string name="requestid">订单编号</string>
     <string name="Query">查询</string>
     <string name="lookfowardto">返信中心期待中</string>
+    <string name="user_info">用户中心期待中</string>
+
 </resources>

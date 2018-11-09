@@ -7,16 +7,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/mviewpager"
-            android:scrollbars="none"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="0dp" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/mtabLayout"
@@ -27,6 +31,7 @@
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/colorAccent"
             app:tabTextColor="@android:color/white" />
-
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
