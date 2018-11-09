@@ -47,11 +47,12 @@ public class ShareUtil {
         return sharedPreferences.getBoolean(key, defvalues);
     }
     //删除
-    public static void remove(Context context,String key,boolean defvalues){
+    public static void remove(Context context,String key){
         SharedPreferences sharedPreferences=context.getSharedPreferences(NAME, Context.MODE_PRIVATE);
         sharedPreferences.edit().remove(key).commit();
     }
-    public static void removeAll(Context context,String key,boolean defvalues){
+    //删除全部
+    public static void removeAll(Context context){
         SharedPreferences sharedPreferences=context.getSharedPreferences(NAME, Context.MODE_PRIVATE);
         sharedPreferences.edit().clear().commit();
     }
