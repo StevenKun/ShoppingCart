@@ -13,5 +13,7 @@
     <string name="Query">查询</string>
     <string name="lookfowardto">返信中心期待中</string>
     <string name="user_info">用户中心期待中</string>
+    <string name="first_method">方式一</string>
+    <string name="second_method">方式二</string>
 
 </resources>

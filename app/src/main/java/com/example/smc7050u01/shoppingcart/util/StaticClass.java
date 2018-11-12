@@ -9,6 +9,8 @@ package com.example.smc7050u01.shoppingcart.util;
  * 描述：TODO 静态类工具
  */
 public class StaticClass {
+
     //版本更新配置文件路径
     public static final String CHECK_UPDATE_URL=" http://10.116.5.198:8080/app_release/config.json";
+
 }
