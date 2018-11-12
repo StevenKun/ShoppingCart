@@ -7,16 +7,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 
-import android.support.v4.app.FragmentManager;
+
+import android.text.TextPaint;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -44,10 +43,11 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
     private TextView method_second;
     private TextView tv_requestno;
     private TextView tv_itemno;
+    private TextView tv_requestno_method_1;
     private EditText edit_requestno_method_first;
 
 
-    private ConstraintLayout con_layout;
+
     private EditText         edit_requestno;
     private EditText         edit_itemno;
     private Button           btn_submit;
@@ -87,16 +87,19 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
     private void initView(View view) {
         tv_itemno = view.findViewById(R.id.textView2);
         tv_requestno = view.findViewById(R.id.textView3);
-
+        tv_requestno_method_1 =view.findViewById(R.id.textView7);
         method_first = view.findViewById(R.id.textView4);
+
         method_first.setOnClickListener(this);
         method_second = view.findViewById(R.id.textView6);
         method_second.setOnClickListener(this);
-
+        TextPaint tp1 =method_first.getPaint();
+        TextPaint tp2=method_second.getPaint();
+        tp1.setFakeBoldText(true);
+        tp2.setFakeBoldText(true);
 
 
         btn_submit = view.findViewById(R.id.button3);
-
         edit_requestno = view.findViewById(R.id.editText4);
         edit_requestno.setTransformationMethod(new AllCapTransformationMethod(true));
         edit_itemno = view.findViewById(R.id.editText5);
@@ -133,12 +136,14 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
             tv_requestno.setVisibility(View.GONE);
             tv_itemno.setVisibility(View.GONE);
             edit_requestno_method_first.setVisibility(View.VISIBLE);
+            tv_requestno_method_1.setVisibility(View.VISIBLE);
         } else {
             edit_requestno.setVisibility(View.VISIBLE);
             edit_itemno.setVisibility(View.VISIBLE);
             tv_requestno.setVisibility(View.VISIBLE);
             tv_itemno.setVisibility(View.VISIBLE);
             edit_requestno_method_first.setVisibility(View.GONE);
+            tv_requestno_method_1.setVisibility(View.GONE);
         }
 
     }
@@ -153,6 +158,12 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
                     String requestno =edit_requestno_method_first.getText().toString().trim();
                     if (!TextUtils.isEmpty(requestno)){
                         L.d("按照方式一运行");
+                        String ret =DBUtil.QueryALL();
+                        msg.what=1002;
+                        mydata =new Bundle();
+                        mydata.putString("result", ret);
+                        msg.setData(mydata);
+                        handler.sendMessage(msg);
                     }else {
                         Looper.prepare();
                         Toast.makeText(getActivity(), "订单号不能为空", Toast.LENGTH_SHORT).show();
@@ -186,7 +197,4 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
             new Thread(run).start();
         }
     }
-
-
-
 }

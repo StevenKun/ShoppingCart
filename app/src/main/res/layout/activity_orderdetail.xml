@@ -21,33 +21,37 @@
             android:padding="20dp">
 
             <LinearLayout
+                android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/requestno"
                     android:textSize="25dp" />
 
                 <TextView
+
                     android:id="@+id/tv_requestid"
                     android:gravity="center"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="23dp" />
 
             </LinearLayout>
             <LinearLayout
+                android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="75dp"
+
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="订单项号"
@@ -56,7 +60,7 @@
                 <TextView
                     android:id="@+id/tv_itemid"
                     android:gravity="center"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="23dp" />
@@ -68,17 +72,18 @@
         </LinearLayout>
 
         <LinearLayout
-
+            android:background="#455a64"
             android:id="@+id/order_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="20dp">
+            android:padding="21dp">
 
             <TextView
+                android:textColor="#3e2723"
                 android:id="@+id/tv_1"
-                android:layout_width="30dp"
+                android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
@@ -93,8 +98,9 @@
                 android:background="#828180" />
 
             <TextView
+                android:textColor="#3e2723"
                 android:id="@+id/tv_2"
-                android:layout_width="30dp"
+                android:layout_width="35dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
@@ -109,8 +115,9 @@
                 android:background="#828180" />
 
             <TextView
+                android:textColor="#3e2723"
                 android:id="@+id/tv_3"
-                android:layout_width="30dp"
+                android:layout_width="35dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape_round_textview"
@@ -120,7 +127,13 @@
 
         </LinearLayout>
 
+        <View
+            android:background="#78909c"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
         <ScrollView
+
+            android:background="#455a64"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

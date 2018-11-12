@@ -113,7 +113,7 @@
 
         <TextView
             android:background="#ffffd1"
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:id="@+id/textView4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
 
         <TextView
 
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:id="@+id/textView6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -142,21 +142,38 @@
 
     <EditText
 
-        android:capitalize="characters"
-        android:text="YY"
-        android:hint="@string/requestno"
+
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="@string/requestno"
 
+        android:inputType="textPersonName"
+        android:text="YY"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="订单号"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
