@@ -12,7 +12,6 @@ import okhttp3.Request;
  * 描述：TODO okhttp3的工具类
  */
 public class HttpUtil {
-
     public static  void sendOkHttpRequest(String address , okhttp3.Callback callback ){
         OkHttpClient client =new OkHttpClient();
         Request request =new Request.Builder()

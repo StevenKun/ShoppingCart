@@ -1,15 +1,13 @@
 package com.example.smc7050u01.shoppingcart;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+
 
 import com.example.smc7050u01.shoppingcart.fragment.Returnletter;
 import com.example.smc7050u01.shoppingcart.fragment.ShoppingCartFragment;
@@ -53,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.mtabLayout);
         viewPager = findViewById(R.id.mviewpager);
 
-
         //预编译
         viewPager.setOffscreenPageLimit(fragment.size());
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -90,6 +87,4 @@ public class MainActivity extends AppCompatActivity {
         fragment.add(new UserFragment());
         fragment.add(new TimesSquare());
     }
-
-
 }

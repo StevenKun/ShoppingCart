@@ -11,6 +11,7 @@ import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.smc7050u01.shoppingcart.HomeActivity;
 import com.example.smc7050u01.shoppingcart.MainActivity;
 import com.example.smc7050u01.shoppingcart.R;
 import com.example.smc7050u01.shoppingcart.util.ShareUtil;
@@ -66,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (!TextUtils.isEmpty(name)&
                 !TextUtils.isEmpty(password)){
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, HomeActivity.class));
             finish();
         }else {
             Toast.makeText(this, "姓名和密码不能为空", Toast.LENGTH_SHORT).show();

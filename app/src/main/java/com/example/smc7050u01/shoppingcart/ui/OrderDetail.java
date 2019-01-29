@@ -16,9 +16,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.smc7050u01.shoppingcart.R;
+import com.example.smc7050u01.shoppingcart.entity.T_sales_yingye;
+import com.example.smc7050u01.shoppingcart.util.L;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 项目名： ShoppingCart
@@ -29,6 +33,8 @@ import java.net.URLDecoder;
  * 描述：TODO
  */
 public class OrderDetail extends AppCompatActivity {
+
+
     private LinearLayout order_top;
     private LinearLayout order_layout;
     private LinearLayout order_status;
@@ -36,11 +42,11 @@ public class OrderDetail extends AppCompatActivity {
     private TextView tv_2;
     private TextView tv_3;
 
-
+    private LinearLayout row_itemid_tip;
     private TextView textresult;
     private TextView tv_requestid;
     private TextView tv_itemid;
-
+    private TextView approved;
 
 
     @Override
@@ -55,22 +61,38 @@ public class OrderDetail extends AppCompatActivity {
         String data =intent.getStringExtra("result");
         String requestno=intent.getStringExtra("edit_requestno");
         String edit_itemno=intent.getStringExtra("edit_itemno");
+        String approvedID =intent.getStringExtra("approvedID");
 
+        if(!TextUtils.isEmpty(approvedID)){
+            approved.setText("出荷指示号");
+            tv_requestid.setText(approvedID);
+        }
 
         if (TextUtils.isEmpty(data)){
             data="查无此数据";
             order_top.setVisibility(View.GONE);
             order_status.setVisibility(View.GONE);
             textresult.setText(data);
-        }else {
-            tv_requestid.setText(requestno);
-            tv_itemid.setText(edit_itemno);
+        }
+        else {
+            if (requestno==null){
+                tv_requestid.setText(approvedID);
+            }else {
+                tv_requestid.setText(requestno);
+                tv_itemid.setText(edit_itemno);
+            }
 
-            if (data.contains(" 接单日期 :null")){
+            if (TextUtils.isEmpty(tv_itemid.getText().toString().trim())){
+                row_itemid_tip.setVisibility(View.GONE);
+            }
+
+
+            if (data.contains("接单日期 :null")){
                 tv_1.setBackgroundResource(R.drawable.shape_round_textview_null);
                 tv_1.setText("未接单");
+
             }
-            if (data.contains(" 打印日期 :null")){
+            if (data.contains("生产准备日期（打印):null")){
                 tv_2.setBackgroundResource(R.drawable.shape_round_textview_null);
                 tv_2.setText("未打印");
             }
@@ -78,7 +100,11 @@ public class OrderDetail extends AppCompatActivity {
                 tv_3.setBackgroundResource(R.drawable.shape_round_textview_null);
                 tv_3.setText("未入库");
             }
-            textresult.setText(data);
+
+            String a =data.replace("null", "");
+
+
+            textresult.setText(a);
         }
     }
 
@@ -88,11 +114,13 @@ public class OrderDetail extends AppCompatActivity {
         tv_1=findViewById(R.id.tv_1);
         tv_2=findViewById(R.id.tv_2);
         tv_3=findViewById(R.id.tv_3);
+
         tv_requestid=findViewById(R.id.tv_requestid);
         tv_itemid=findViewById(R.id.tv_itemid);
+        row_itemid_tip=findViewById(R.id.row_itemid_tip);
         order_layout=findViewById(R.id.order_layout);
         order_status=findViewById(R.id.order_status);
         order_top=findViewById(R.id.order_top);
-
+        approved=findViewById(R.id.ApprovedID);
     }
 }

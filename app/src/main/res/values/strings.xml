@@ -8,12 +8,15 @@
     <string name="order_receiving">已接单</string>
     <string name="print">已打印</string>
     <string name="storege">已入库</string>
-    <string name="itemid">订单项号</string>
+    <string name="itemid">订单项号 </string>
     <string name="requestid">订单编号</string>
     <string name="Query">查询</string>
     <string name="lookfowardto">返信中心期待中</string>
     <string name="user_info">用户中心期待中</string>
-    <string name="first_method">方式一</string>
-    <string name="second_method">方式二</string>
+    <string name="first_method">订单查询</string>
+    <string name="second_method">项号查询</string>
+    <string name="three_method">指示号查询</string>
+    <string name="Home">主菜单</string>
+    <string name="order_id">订单编号</string>
 
 </resources>

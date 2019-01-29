@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="color_method_first">#ffffd1</color>
+    <color name="method_red">#f53505</color>
 
 </resources>
